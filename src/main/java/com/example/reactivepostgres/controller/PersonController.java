@@ -28,7 +28,7 @@ public class PersonController {
     @PostMapping
     public Mono<Person> create(@RequestBody PersonTo personTo) {
         Person person = new Person();
-        person.setName(person.getName());
+        person.setName(personTo.getName());
         return repository.save(person);
     }
 
